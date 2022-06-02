@@ -5,11 +5,6 @@ beforeEach(() => {
   render(<App />);
 })
 
-test('Check Text', () => {
-  const linkElement = screen.getByText(/Comment Box/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
 test('Check Box', () => {
   const commentBox = screen.getByRole('box');
   expect(commentBox).toBeInTheDocument();
