@@ -15,12 +15,11 @@ class ComponentBox extends Component {
         event.preventDefault();
         // TODO: submit action
         this.setState({comment: ''});
-        console.log(event);
     }
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form onSubmit={this.handleSubmit} role="box">
                 <h4>{this.title}</h4>
                 <textarea onChange={this.handleChange} value={this.state.comment} />
                 <div>
