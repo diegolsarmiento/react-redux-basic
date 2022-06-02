@@ -1,8 +1,12 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import App from 'components/App';
 
 beforeEach(() => {
   render(<App />);
+})
+
+afterEach(() => {
+  cleanup;
 })
 
 test('Check Box', () => {
