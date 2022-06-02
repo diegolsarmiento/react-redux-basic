@@ -1,18 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './components/App';
-import CommentBox from './components/CommentBox';
-import CommentList from './components/CommentList';
+import App from 'components/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App>
-      <CommentBox/>
-      <CommentList/>
-    </App>
+    <App></App>
   </React.StrictMode>
 );
 
