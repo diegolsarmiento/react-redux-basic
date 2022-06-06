@@ -1,8 +1,13 @@
 import { cleanup, render, screen } from '@testing-library/react';
 import App from 'components/App';
+import Root from 'Root';
 
 beforeEach(() => {
-  render(<App />);
+  render(
+    <Root>
+      <App />
+    </Root>
+  );
 })
 
 afterEach(() => {

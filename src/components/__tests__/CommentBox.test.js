@@ -1,11 +1,16 @@
 import {render, fireEvent} from '@testing-library/react'
 import CommentBox from 'components/CommentBox';
+import Root from 'Root';
 
 let setup;
 beforeEach(()=> {
     setup = () => {
-        const utils = render(<CommentBox />)
-        const comment = utils.getByLabelText('text-comment')
+        const utils = render(
+          <Root>
+                <CommentBox />
+          </Root>
+        );
+        const comment = utils.getByLabelText('text-comment');
         return {
           comment,
           ...utils,
