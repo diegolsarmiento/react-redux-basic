@@ -9,13 +9,13 @@ class ComponentBox extends Component {
 
     state = { comment: ''};
 
-    handleChange = event => {
+    handleChange = (event) => {
         this.setState({ comment: event.target.value});
     }
 
     handleSubmit = event => {
         event.preventDefault();
-        this.props.saveComment(event.targe.value);
+        this.props.saveComment(this.state.comment);
         this.setState({comment: ''});
     }
 
