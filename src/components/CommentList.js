@@ -5,7 +5,7 @@ class ComentList extends Component {
 
     renderComments() {
         return this.props.comments.map((comment, index) => {
-            return <li key={index}>{comment}</li>
+            return <li key={index} aria-label="comment-list">{comment}</li>
         })
     }
 

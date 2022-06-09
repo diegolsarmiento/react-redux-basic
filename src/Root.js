@@ -3,10 +3,10 @@ import { Provider } from 'react-redux';
 import reducers from 'reducers';
 import { configureStore } from '@reduxjs/toolkit';
 
-export default (props) => {
+export default ({children, initialState = {} }) => {
     return (
-        <Provider store={configureStore({ reducer: reducers })}>
-            {props.children}
+        <Provider store={configureStore({ reducer: reducers, preloadedState: initialState})}>
+            {children}
         </Provider>
     );
 };
