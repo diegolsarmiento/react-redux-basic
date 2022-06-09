@@ -21,13 +21,16 @@ class ComponentBox extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit} role="box">
-                <h4>{this.title}</h4>
-                <textarea aria-label="text-comment" onChange={this.handleChange} value={this.state.comment} />
-                <div>
-                    <button>{this.buttonText}</button>
-                </div>
-            </form>
+            <div>
+                <form onSubmit={this.handleSubmit} role="box">
+                    <h4>{this.title}</h4>
+                    <textarea aria-label="text-comment" onChange={this.handleChange} value={this.state.comment} />
+                    <div>
+                        <button>{this.buttonText}</button>
+                    </div>
+                </form>
+                <button onClick={this.props.fetchComments}>Fetch Comments</button>
+            </div>
         )
     }
 }
