@@ -29,7 +29,7 @@ class ComponentBox extends Component {
                         <button>{this.buttonText}</button>
                     </div>
                 </form>
-                <button onClick={this.props.fetchComments}>Fetch Comments</button>
+                <button aria-label="async-button" onClick={this.props.fetchComments}>Fetch Comments</button>
             </div>
         )
     }
